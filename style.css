@@ -1,0 +1,103 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik+Mono+One&display=swap");
+
+* {
+    box-sizing: border-box;
+    font-family: "Rubik Mono One", monospace;
+    font-weight: normal;
+    margin: 0;
+}
+
+.page {
+    align-items: center;
+    background-color: #88bbee;
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+}
+
+.calculator {
+    background: linear-gradient(
+        145deg,
+        rgba(255, 255, 255, 0.5),
+        rgba(255, 255, 255, 0.1)
+    );
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2),
+        inset 0 0 20px rgba(255, 255, 255, 0.5);
+    padding: 20px;
+    width: 363px;
+}
+
+input[type="text"] {
+    background: linear-gradient(
+        145deg,
+        rgba(255, 255, 255, 0.8),
+        rgba(255, 255, 255, 0.1)
+    );
+    border: none;
+    border-radius: 10px;
+    box-shadow: inset 0 0 20px rgba(255, 255, 255, 0.2),
+        0 0 10px rgba(0, 0, 0, 0.1);
+    color: #333;
+    font-size: 24px;
+    margin-bottom: 20px;
+    outline: none;
+    padding: 15px;
+    text-align: right;
+    width: 100%;
+}
+
+.tombol button {
+    background: linear-gradient(
+        145deg,
+        rgba(255, 255, 255, 0.6),
+        rgba(255, 255, 255, 0.2)
+    );
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1),
+        inset 0 0 10px rgba(255, 255, 255, 0.2);
+    cursor: pointer;
+    font-size: 24px;
+    margin: 5px;
+    outline: none;
+    padding: 15px 20px;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.tombol button:hover {
+    background: linear-gradient(
+        145deg,
+        rgba(255, 255, 255, 0.8),
+        rgba(255, 255, 255, 0.4)
+    );
+    transform: translateY(-2px);
+}
+
+button {
+    color: #333;
+}
+
+button span {
+    position: relative;
+    z-index: 2;
+}
+
+button::before {
+    color: rgba(255, 255, 255, 0.6);
+    content: attr(data-value);
+    pointer-events: none;
+    position: absolute;
+    left: 2px;
+    top: 2px;
+}
+
+.credit {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    font-size: 12px;
+    color: #333;
+}
